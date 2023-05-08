@@ -1,21 +1,62 @@
 body, html {
     font-family: "Roboto", sans-serif;
-    background: linear-gradient(to bottom, #dfc8fd 0%,#baabff 40%,#72aaff 100%);
+    background: rgb(255, 214, 238);
     height: 100%;
   }
 
-  .logo {
-    background-image: url('img/ernie.jpg');
-    width: 100px;
-    height: 100px;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
+  // .logo {
+  //   background-image: url('img/ernie.jpg');
+  //   width: 100px;
+  //   height: 100px;
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  // }
 
   :root {
     text-size-adjust: 100%;
   }
 
   .active {
-    color: pink;
+    color: rgb(4, 0, 255);
+  }
+
+  .navbar {
+    background-color: rgb(239, 155, 241);
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    display: flex;
+  }
+
+  .navbar ul li {
+    margin-right: 1rem;
+  }
+
+  .navbar a {
+    text-decoration: none;
+  }
+
+  .content {
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .content ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .content ul a {
+    text-decoration: none;
   }

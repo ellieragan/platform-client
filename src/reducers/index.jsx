@@ -3,9 +3,11 @@
 import { combineReducers } from '@reduxjs/toolkit';
 
 import CountReducer from './count-reducer';
+import PostReducer from './post-reducer';
 
 const rootReducer = combineReducers({
   count: CountReducer,
+  posts: PostReducer,
 });
 
 export default rootReducer;
