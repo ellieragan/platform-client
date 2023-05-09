@@ -3,9 +3,10 @@ import axios from 'axios';
 // keys for actiontypes
 export const ActionTypes = {
   FETCH_POSTS: 'FETCH_POSTS',
-  // FETCH_POST: 'FETCH_POST',
+  FETCH_POST: 'FETCH_POST',
   // FETCH_POSTS_REQUEST: 'FETCH_POSTS_REQUEST',
   FETCH_POSTS_SUCCESS: 'FETCH_POSTS_SUCCESS',
+  FETCH_POST_SUCCESS: 'FETCH_POST_SUCCESS',
   FETCH_POSTS_FAILURE: 'FETCH_POSTS_FAILURE',
   INCREMENT: 'INCREMENT',
   DECREMENT: 'DECREMENT',
@@ -39,12 +40,12 @@ export function fetchPostsSuccess(posts) {
   };
 }
 
-// export function fetchPostSuccess(post) {
-//   return {
-//     type: ActionTypes.FETCH_POSTS_SUCCESS,
-//     payload: post,
-//   };
-// }
+export function fetchPostSuccess(post) {
+  return {
+    type: ActionTypes.FETCH_POST_SUCCESS,
+    payload: post,
+  };
+}
 
 export function fetchPostsFailure(error) {
   return {
@@ -79,7 +80,7 @@ export function fetchPost(id) {
     axios.get(`${ROOT_URL}/posts/${id}${API_KEY}`)
       .then((response) => {
         const post = response.data;
-        dispatch(fetchPostsSuccess(post));
+        dispatch(fetchPostSuccess(post));
       })
 
       .catch((error) => {

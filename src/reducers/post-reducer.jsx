@@ -3,6 +3,7 @@ import { ActionTypes } from '../actions';
 const initialState = {
   all: [],
   current: {},
+//   byID: {},
 //   loading: false,
 //   error: null,
 };
@@ -13,6 +14,20 @@ const PostReducer = (state = initialState, action = {}) => {
       return {
         ...state,
         // loading: true,
+        // all: action.payload,
+      };
+    case ActionTypes.FETCH_POST:
+      return {
+        ...state,
+      };
+    case ActionTypes.FETCH_POST_SUCCESS:
+      return {
+        ...state,
+        current: action.payload,
+        // current: {
+        //   ...state.current,
+        //   [action.payload.id]: action.payload,
+        // },
       };
     case ActionTypes.FETCH_POSTS_SUCCESS:
       return {
