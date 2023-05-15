@@ -2,22 +2,10 @@ import React from 'react';
 import {
   BrowserRouter, Routes, Route,
 } from 'react-router-dom';
-import Counter from './counter';
-import Controls from './controls';
 import Posts from './theposts';
 import Post from './thepost';
 import Nav from './navbar';
-
-function NewPost(props) {
-  return (
-    <div>
-      make a new post
-      <Counter />
-      <Controls />
-    </div>
-
-  );
-}
+import NewPost from './newpost';
 
 function App(props) {
   return (
@@ -37,12 +25,4 @@ function App(props) {
   );
 }
 
-// function FallBack(props) {
-//   return (
-//     <div>URL Not Found</div>
-//   );
-// }
-
-//   const root = createRoot(document.getElementById('main'));
-// root.render(<App />);
 export default App;

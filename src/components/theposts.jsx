@@ -1,38 +1,29 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
 import { fetchPosts } from '../actions/index';
-// import Nav from './navbar';
 
 function Posts(props) {
-  // const { postlist } = props;
   const dispatch = useDispatch();
   const allPosts = useSelector((store) => store.posts.all);
   console.log(allPosts);
-  // const loading = useSelector((store) => store.posts.loading);
-  // const error = useSelector((store) => store.posts.error);
 
   useEffect(() => {
     dispatch(fetchPosts());
   }, []);
 
-  // if (loading) {
-  //   return <div>Loading...</div>;
-  // }
-
-  // if (error) {
-  //   return <div>Error: {error}</div>;
-  // }
-
   return (
     <div>
-      <ul>
+      <ul className="postlist">
         {allPosts.map((post) => (
-          <li key={post.id}>
+          <li key={post.id} className="littlepost">
             <NavLink to={`/posts/${post.id}`}>
-              <img src={post.coverUrl} alt={post.title} />
-              <h3>{post.title}</h3>
-              <p>{post.tags}</p>
+              <img src={post.coverUrl} alt={post.title} className="image" />
+              <div className="texts">
+                <ReactMarkdown>{post.title || ''}</ReactMarkdown>
+                <ReactMarkdown>{post.tags || ''}</ReactMarkdown>
+              </div>
             </NavLink>
           </li>
         ))}
@@ -40,17 +31,5 @@ function Posts(props) {
     </div>
   );
 }
-
-// const mapStateToProps = (store) => {
-//   return {
-//     posts: store.posts.all,
-//   };
-// };
-
-// const mapDispatchToProps = {
-//   fetchPosts,
-// };
-
-// export default connect(mapStateToProps, mapDispatchToProps)(Posts);
 
 export default Posts;
