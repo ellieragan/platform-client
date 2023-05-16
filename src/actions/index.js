@@ -27,7 +27,7 @@ export function decrement() {
 
 export function fetchPosts() {
   return (dispatch) => {
-    const ROOT_URL = 'https://platform.cs52.me/api';
+    const ROOT_URL = 'http://localhost:9090/api';
     const API_KEY = '?key=e_boyd';
 
     axios.get(`${ROOT_URL}/posts${API_KEY}`)
@@ -49,7 +49,7 @@ export function fetchPosts() {
 
 export function fetchPost(id) {
   return (dispatch) => {
-    const ROOT_URL = 'https://platform.cs52.me/api';
+    const ROOT_URL = 'http://localhost:9090/api';
     const API_KEY = '?key=e_boyd';
 
     axios.get(`${ROOT_URL}/posts/${id}${API_KEY}`)
@@ -72,7 +72,7 @@ export function fetchPost(id) {
 
 export function createPost(post, navigate) {
   return (dispatch) => {
-    const ROOT_URL = 'https://platform.cs52.me/api';
+    const ROOT_URL = 'http://localhost:9090/api';
     const API_KEY = '?key=e_boyd';
 
     axios.post(`${ROOT_URL}/posts${API_KEY}`, post)
@@ -91,7 +91,7 @@ export function createPost(post, navigate) {
 
 export function updatePost(post, id) {
   return (dispatch) => {
-    const ROOT_URL = 'https://platform.cs52.me/api';
+    const ROOT_URL = 'http://localhost:9090/api';
     const API_KEY = '?key=e_boyd';
 
     axios.put(`${ROOT_URL}/posts/${id}${API_KEY}`, post)
@@ -114,7 +114,7 @@ export function updatePost(post, id) {
 
 export function deletePost(id, navigate) {
   return (dispatch) => {
-    const ROOT_URL = 'https://platform.cs52.me/api';
+    const ROOT_URL = 'http://localhost:9090/api';
     const API_KEY = '?key=e_boyd';
 
     axios.delete(`${ROOT_URL}/posts/${id}${API_KEY}`)
