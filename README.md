@@ -1,14 +1,12 @@
 # Lab 4
- 
-I'm planning to use one of my resubmits for this assignment, I'll get it done in the next few days before lab 5 is released.
 
 [deployed url](https://platform-client-ellieragan.onrender.com)
 
 ## What Worked Well
-I'm tentatively starting to understand react and redux?
+I resubmitted my lab 4! This lab was so so helpful for me in understanding redux, I went into it feeling very confused but by the time I wrote the last one of my action functions I felt a lot more comfortable with it. 
 
 ## What Didn't
-I'm currently having an issue where clicking on a post overwrites the array of all posts with the one post's ID (so if you click on a post and then click back to the posts page, the posts will all be gone and the screen will be empty), which I just realized is because I'm missing a FETCH_POST action (which should be pretty straightforward to add in), but I know I need to resubmit anyway since I'm still missing a bunch of stuff so I figured it would be better to submit what I have now rather than trying to fix this bug and then ending up submitting late. 
+I spent a really long time trying to figure out how to make a new post, and initially tried to create a new post upon clicking the "new post" link, but then realized that that would be unnecessarily roundabout because then I'd also have to have it automatically edit the new post and I couldn't figure out how to get it to work. So I decided to make the new post link just show something that was more like a form that created a new post upon clicking a submit button. A lot of this lab was just trial and error and googling bugs and going to office hours. 
 
 ## Extra Credit
 
