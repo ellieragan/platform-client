@@ -18,22 +18,3 @@ root.render(
     <App />
   </Provider>,
 );
-
-// const root = createRoot(document.getElementById('main'));
-
-// root.render(
-//   <Provider store={store}>
-//     <App />
-//   </Provider>,
-// );
-
-// function App() {
-//   return (
-//     <div className="test">All the REACT are belong to us!</div>
-//   );
-// }
-
-// const App = () => <div className="test">All the REACT are belong to us!</div>;
-
-// const root = createRoot(document.getElementById('main'));
-// root.render(<App />);
