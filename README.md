@@ -1,4 +1,4 @@
-# Lab 4
+# Lab 4 (client for blog)
 
 [deployed url](https://platform-client-ellieragan.onrender.com)
 
