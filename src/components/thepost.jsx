@@ -84,19 +84,21 @@ function Post(props) {
     return (
       <div className="postcontent">
         <div className="inputs">
-          <input onChange={handleCoverChange} value={editedCover || ''} placeholder={post.coverUrl} />
-          <input onChange={handleTitleChange} value={editedTitle || ''} placeholder={post.title} />
-          <textarea onChange={handleTextChange} value={editedText} placeholder={post.content} />
-          <input onChange={handleTagsChange} value={editedTags || ''} placeholder={post.tags} />
+          <input className="custom-input" onChange={handleCoverChange} value={editedCover || ''} placeholder={post.coverUrl} />
+          <input className="custom-input" onChange={handleTitleChange} value={editedTitle || ''} placeholder={post.title} />
+          <textarea className="custom-textarea" onChange={handleTextChange} value={editedText} placeholder={post.content} />
+          <input className="custom-input" onChange={handleTagsChange} value={editedTags || ''} placeholder={post.tags} />
         </div>
-        <FontAwesomeIcon icon={faSquareCheck} size="lg" onClick={handleSaveClick} />
+        <FontAwesomeIcon className="save" icon={faSquareCheck} size="lg" onClick={handleSaveClick} />
       </div>
     );
   } else {
     return (
       <div>
-        <FontAwesomeIcon className="delete" icon={faTrashCan} size="lg" onClick={handleDeleteClick} />
-        <FontAwesomeIcon className="edit" icon={faPencil} size="lg" onClick={handleEditClick} />
+        <div className="buttonContainer">
+          <FontAwesomeIcon className="delete" icon={faTrashCan} size="lg" onClick={handleDeleteClick} />
+          <FontAwesomeIcon className="edit" icon={faPencil} size="lg" onClick={handleEditClick} />
+        </div>
         <div className="postcontent">
           <img src={post.coverUrl} alt={post.title} className="image" />
           <ReactMarkdown>{post.title || ''}</ReactMarkdown>

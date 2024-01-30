@@ -14,7 +14,7 @@ function Posts(props) {
   }, []);
 
   return (
-    <div>
+    <div className="background">
       <ul className="postlist">
         {allPosts.map((post) => (
           <li key={post.id} className="littlepost">

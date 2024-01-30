@@ -57,12 +57,12 @@ function NewPost(props) {
   return (
     <div className="postcontent">
       <div className="inputs">
-        <input onChange={handleCoverChange} value={editedCover || ''} placeholder="cover url" />
-        <input onChange={handleTitleChange} value={editedTitle || ''} placeholder="title" />
-        <textarea onChange={handleTextChange} value={editedText || ''} placeholder="content" />
-        <input onChange={handleTagsChange} value={editedTags || ''} placeholder="tags" />
+        <input className="custom-input" onChange={handleCoverChange} value={editedCover || ''} placeholder="cover url" />
+        <input className="custom-input" onChange={handleTitleChange} value={editedTitle || ''} placeholder="title" />
+        <textarea className="custom-textarea" onChange={handleTextChange} value={editedText || ''} placeholder="content" />
+        <input className="custom-input" onChange={handleTagsChange} value={editedTags || ''} placeholder="tags" />
       </div>
-      <FontAwesomeIcon icon={faSquareCheck} size="lg" onClick={handleAddPost} />
+      <FontAwesomeIcon className="save" icon={faSquareCheck} size="lg" onClick={handleAddPost} />
     </div>
   );
 }
